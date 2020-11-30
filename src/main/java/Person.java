@@ -9,19 +9,13 @@ public class Person {
 
     public Person(String name, String surname, int age, String address) {
         this.name = name;
-        if (this.name == null) {
-            throw new IllegalArgumentException();
-        }
         this.surname = surname;
-        if (this.surname == null) {
-            throw new IllegalArgumentException();
-        }
         this.age = age;
         this.address = address;
     }
 
     public boolean hasAge() {
-        if (age > 0)
+        if (age >= 0)
             return true;
         else
             return false;

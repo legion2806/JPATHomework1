@@ -30,7 +30,15 @@ public class PersonBuilder {
     }
 
     Person build() {
+        if (this.name == null) {
+            throw new IllegalArgumentException();
+        }
+        else if (this.surname == null) {
+            throw new IllegalArgumentException();
+        }
         return new Person(name, surname, age, address);
     }
+
+
 
 }
